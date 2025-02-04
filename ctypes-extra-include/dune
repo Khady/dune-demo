@@ -1,0 +1,20 @@
+(executable
+ (name foo)
+ (libraries unix)
+ ; ctypes backward compatibility shims warn sometimes; suppress them
+ (flags
+  (:standard -w -9-27))
+ (ctypes
+  (external_library_name ncurses)
+  (build_flags_resolver pkg_config)
+  (headers
+   (preamble "#include \"ocaml_bindings.h\"\n   #include <ncurses.h>"))
+  (type_description
+   (instance Types)
+   (functor Type_description))
+  (function_description
+   (concurrency sequential)
+   (instance Functions)
+   (functor Function_description))
+  (generated_types Types_generated)
+  (generated_entry_point C)))
