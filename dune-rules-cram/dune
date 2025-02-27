@@ -1,0 +1,1 @@
+(cram (deps sub/file.json))
