@@ -1,0 +1,1 @@
+(rule (target f.json) (action (with-stdout-to %{target} (copy sub/file.json f.json))))
