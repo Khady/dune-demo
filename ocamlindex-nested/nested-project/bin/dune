@@ -1,0 +1,4 @@
+(executable
+ (public_name nested)
+ (name main)
+ (libraries nested))
