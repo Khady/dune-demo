@@ -1,0 +1,4 @@
+(executable
+ (public_name build_exec)
+ (name build_exec)
+ (libraries build_exec))
